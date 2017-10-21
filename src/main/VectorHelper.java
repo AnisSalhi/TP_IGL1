@@ -24,4 +24,23 @@ public class VectorHelper {
         }
     }
 
+    /**
+     * <p>inverser les elements d'un tableaux .</p>
+     * @param vector
+     *      tableaux des entiers .
+     */
+    public static void switchElements (Vector vector){
+        /**
+         * j inialisé au l'indice de dernier element du tableaux .
+         */
+        int temp;
+        int j=vector.coordinates.size()-1;
+        for (int i=0 ; i<=((vector.coordinates.size()-1)/2);i++){
+            temp=vector.coordinates.get(i);
+            vector.coordinates.set(i,vector.coordinates.get(j));
+            vector.coordinates.set(j,temp);
+            j--;
+        }
+    }
+
 }
