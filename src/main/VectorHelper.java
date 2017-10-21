@@ -43,4 +43,20 @@ public class VectorHelper {
         }
     }
 
+    /**
+     * <p>retourner le Min et le Max d'un tableau donner . </p>
+     * @param vector
+     *  tab des entiens .
+     */
+    public static String getMinMax (Vector vector){
+        int min=vector.coordinates.get(0);
+        int max=vector.coordinates.get(0);
+        for (int i=0 ; i<=vector.coordinates.size()-1; i++){
+            if (vector.coordinates.get(i)<min) min=vector.coordinates.get(i) ; else
+            if (vector.coordinates.get(i)>max) max=vector.coordinates.get(i);
+        }
+        String reslt="MIN="+min+" MAX="+max;
+        return reslt;
+    }
+
 }
