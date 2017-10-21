@@ -43,4 +43,19 @@ public class VectorHelperTest {
         VectorHelper.switchElements(a);
         for(int i=0; i<=3; i++) assertEquals((int)a.coordinates.get(i),test1[i]);
     }
+
+    @Test
+    public void getMinMaxTest() throws Exception {
+        ArrayList<Integer> test= new ArrayList<>();
+        test.add(0,-1);
+        test.add(1,15);
+        test.add(2,3);
+        test.add(3,7);
+        Vector a=new Vector(test,4);
+        String minmax="MIN=-1 MAX=15";
+        String minmaxtst=VectorHelper.getMinMax(a);
+        assertEquals(minmax,minmaxtst);
+
+    }
+
 }
