@@ -18,4 +18,11 @@ public class Vector {
         this.coordinates = coordinates;
         this.dimension = dimension;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!(this.dimension == ((Vector)obj).dimension )) return false;
+        for(int i=0 ; i<this.dimension;i++){if(!(this.coordinates.get(i) == ((Vector)obj).coordinates.get(i)))return false;}
+        return true;
+    }
 }
